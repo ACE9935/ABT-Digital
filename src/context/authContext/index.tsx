@@ -5,6 +5,7 @@ import { getUserById } from '@/firebase/getUserById';
 import { User } from '@/types';
 import {usePathname, useSearchParams} from 'next/navigation'
 import { useRouter } from 'next/navigation';
+import { isValidUser } from '@/firebase/isValidUser';
 
 
 interface UserContextType {
@@ -50,7 +51,7 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
  }, [pathname, searchParams])
 
  useEffect(() => {
-  console.log(user)
+  if(!isValidUser(user) && !loading) router.push("/login")
 }, [user,loading])
 
   useEffect(()=>{

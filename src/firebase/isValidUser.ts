@@ -1,4 +1,5 @@
-import { User } from "firebase/auth";
+import { User } from "@/types";
+
 
  export function isValidUser(user: User|null): boolean {
     if (user) {
