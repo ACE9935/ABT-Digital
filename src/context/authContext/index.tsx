@@ -38,7 +38,8 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
       if (userId) {
         const userData = await getUserById(userId);
         setUser(userData);
-      }
+        setLoading(false);
+      }else setLoading(false);
     } catch (error) {
       console.error('Error getting user document:', error);
     } finally {
@@ -51,7 +52,7 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
  }, [pathname, searchParams])
 
  useEffect(() => {
-  if(!isValidUser(user) && !loading) router.push("/login")
+  if(!user && !loading) router.push("/login")
 }, [user,loading])
 
   useEffect(()=>{
@@ -60,7 +61,6 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
         fetchUser();
       } else {
         setUser(null);
-        setLoading(false);
       }
     });
 
