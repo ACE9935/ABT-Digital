@@ -41,9 +41,8 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
         setLoading(false);
       }else setLoading(false);
     } catch (error) {
-      console.error('Error getting user document:', error);
-    } finally {
       setLoading(false);
+      console.error('Error getting user document:', error);
     }
   };
 
