@@ -24,7 +24,7 @@ const links=[{
    export const configurations = {
     appName: "ABT-Digital",
     bluetheme: "rgb(94, 123, 238)",
-    host: "http://localhost:3000",
+    host: "https://abt-digital.vercel.app",
     dashBoardLinks: links,
     staticQrCode: "https://firebasestorage.googleapis.com/v0/b/abt-digital.appspot.com/o/40415-bdc-qr-code.webp?alt=media&token=524eddee-f350-4466-a8ad-f2759bb0c9c5",
     darkSpinner: "https://firebasestorage.googleapis.com/v0/b/abt-digital.appspot.com/o/Rolling%401.5x-1.0s-200px-200px%20(1).gif?alt=media&token=6c4c257f-c455-49fb-b9ce-adfa5335d8bd",
