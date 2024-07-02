@@ -37,8 +37,8 @@ function SMSCustomizerForm({automate, automateValue,automateType,user}:{automate
       e.preventDefault();
       setLoading(true);
       try {
-         const response = await axios.post('/api/send-client-email', {userId: user?.id,emails:user?.clientEmails,emailContent:sms.sms,automate, sender: sms.sender, automateValue, automateType});
-         console.log('Email sent successfully:', response.data);
+        
+         console.log('Email sent successfully:');
          // Handle success response
       } catch (error) {
          console.error('Error sending email:', error);
