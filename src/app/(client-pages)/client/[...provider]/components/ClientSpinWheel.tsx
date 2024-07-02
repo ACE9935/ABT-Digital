@@ -142,7 +142,7 @@ function ClientSpinWheel() {
               <motion.div
               initial={{scale:0}}
               animate={{scale:1}}
-              className='p-6 sm:px-14 flex flex-col items-center gap-6 rounded-md w-[20rem] md:w-[30rem] bg-slate-100'
+              className='p-6 sm:px-14 flex flex-col items-center gap-6 rounded-md w-[22rem] md:w-[30rem] bg-slate-100'
               transition={{type:"spring"}}
               >
               {hasWon?
