@@ -6,6 +6,7 @@ import theme from "@/providers/theme";
 import UserProvider from "@/context/authContext";
 import Chakra from "@/providers/ChakraProvider";
 import DashBoardLayout from "@/components/dashboad/layout/DashBoardLayout";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <Suspense>
       <UserProvider>
         <Chakra>
       <ThemeProvider theme={theme}>
@@ -29,6 +31,7 @@ export default function RootLayout({
         </ThemeProvider>
         </Chakra>
         </UserProvider>
+        </Suspense>
         </body>
     </html>
   );
