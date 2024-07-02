@@ -67,11 +67,10 @@ function QrcodeEditor() {
   
      setIsLoading(true)
     try{
-     const user=auth.currentUser
 
     if(isValidUser(user)){
       
-     const userId=user!.uid
+     const userId=user!.id
      const qrCodeId=userId+Date.now()
      let qrCodeURI=null
 
