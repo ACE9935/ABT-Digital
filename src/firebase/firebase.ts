@@ -15,7 +15,7 @@ const firebaseConfig = {
 };
 
 export const actionCodeSettings = {
-  url: `${configurations.host}?verified=true`, // URL where the link will redirect to after email verification
+  url: `${configurations.host}/dashboard?verified=true`, // URL where the link will redirect to after email verification
   handleCodeInApp: true, // This must be true for redirects to work on mobile devices// Optional, if you're using Firebase Dynamic Links
 };
 // Initialize Firebase

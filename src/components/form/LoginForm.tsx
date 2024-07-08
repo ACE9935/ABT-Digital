@@ -42,7 +42,7 @@ function LoginForm({resetPassword}:{resetPassword:string | null}) {
       },[])
 
     useEffect(()=>{
-      if(response.status=="OK") router.push("/")
+      if(response.status=="OK") router.push("/dashboard")
     
     },[response])
 

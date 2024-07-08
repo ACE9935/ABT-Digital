@@ -67,7 +67,7 @@ export interface SignUpResponse {
 
 export interface LoginResponse {
     // Indique les erreurs rencontrées lors de la tentative de connexion.
-    errorMsg: "Une erreur est survenue, veuillez réessayer ultérieurement" | "Utilisateur introuvable. Veuillez vérifier votre email et mot de passe"| "Veuillez fournir une adresse e-mail valide" | null;
+    errorMsg: "Veuillez vérifier votre email pour vous connecter" | "Une erreur est survenue, veuillez réessayer ultérieurement" | "Utilisateur introuvable. Veuillez vérifier votre email et mot de passe"| "Veuillez fournir une adresse e-mail valide" | null;
     // Indique le statut de la réponse.
     status: "ERROR" | "OK" | null;
  }

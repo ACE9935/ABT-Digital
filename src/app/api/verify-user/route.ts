@@ -34,7 +34,7 @@ export async function GET(
       });
     });
     }
-    return Response.redirect(process.env.HOST+"/?verifiedUser=true")
+    return Response.redirect(process.env.HOST+"/dashboard?verifiedUser=true")
   }
   catch (e:unknown){
     console.log({error:e})

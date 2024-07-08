@@ -101,7 +101,8 @@ export const doCreateUserWithEmailAndPassword = async ({userName,name,email, pwd
 export const doSignInWithEmailAndPassword = async (email:string, password:string):Promise<LoginResponse> => {
 
   try{
-  await signInWithEmailAndPassword(auth, email, password);
+  const result = await signInWithEmailAndPassword(auth, email, password)
+  if(!result.user.emailVerified) return {errorMsg: "Veuillez vérifier votre email pour vous connecter", status: "ERROR"}
   return {errorMsg:null,status:"OK"}
 } catch (error:any) {
 

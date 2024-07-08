@@ -52,7 +52,7 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(()=>{
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
+      if (authUser && isValidUser(authUser)) {
         fetchUser();
       } else {
         setUser(null);
